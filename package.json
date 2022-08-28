@@ -1,0 +1,98 @@
+{
+  "name": "@andideve/tailwindui-react",
+  "version": "0.1.0",
+  "description": "",
+  "homepage": "https://github.com/andideve/tailwindui-react",
+  "bugs": "https://github.com/andideve/tailwindui-react/issues",
+  "license": "MIT",
+  "author": "Andi <andideve0@gmail.com>",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andideve/tailwindui-react.git"
+  },
+  "peerDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.1.8"
+  },
+  "scripts": {
+    "dev": "start-storybook -p 3000 -s public",
+    "clean": "rimraf dist/",
+    "remove-files": "rimraf dist/stories/",
+    "copy-files": "copyfiles -u 1 src/**/*.css dist/",
+    "build": "npm run clean && tsc && npm run remove-files && npm run copy-files",
+    "build-storybook": "build-storybook -s public",
+    "deploy": "npm publish"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/node-logger": "^6.5.10",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.56",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.1",
+    "eslint-plugin-react": "^7.31.1",
+    "prettier": "^2.7.1",
+    "prop-types": "^15.8.1",
+    "react-scripts": "5.0.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.2",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.74.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  }
+}

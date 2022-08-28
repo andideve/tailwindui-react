@@ -1,0 +1,93 @@
+.btn {
+  @apply no-underline;
+  @apply inline-flex items-center justify-center;
+  @apply whitespace-nowrap font-semibold;
+  @apply focus:ring-2 focus:ring-blue-300;
+  @apply disabled:text-white disabled:bg-blue-200 lg:disabled:hover:bg-blue-200;
+  @apply transition-all;
+}
+.btn [class*='btn__icon'] {
+  @apply text-inherit;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+.btn .btn__icon--left {
+  margin-right: var(--icon-space-x);
+}
+.btn .btn__icon--right {
+  margin-left: var(--icon-space-x);
+}
+
+.btn-filled {
+  @apply text-white bg-blue-500;
+  @apply lg:hover:bg-blue-700;
+  @apply focus:bg-blue-500;
+}
+.btn-outlined {
+  @apply text-inherit bg-transparent ring-1 ring-gray-300;
+  @apply lg:hover:bg-gray-100;
+  @apply focus:bg-transparent;
+  @apply disabled:ring-0;
+}
+.btn-link {
+  @apply text-blue-500 bg-transparent;
+  @apply lg:hover:bg-blue-100;
+  @apply focus:bg-transparent;
+}
+
+.btn-xs {
+  @apply py-2 px-3;
+  @apply text-xs;
+  --icon-space-x: 0.5rem;
+  --icon-size: 1rem;
+}
+.btn-sm {
+  @apply py-2 px-3;
+  @apply text-sm;
+  --icon-space-x: 0.5rem;
+  --icon-size: 1rem;
+}
+.btn-md {
+  @apply py-[.625rem] px-5;
+  @apply text-sm;
+  --icon-space-x: 0.75rem;
+  --icon-size: 1.125rem;
+}
+.btn-lg {
+  @apply py-3 px-5;
+  @apply text-base;
+  --icon-space-x: 0.75rem;
+  --icon-size: 1.25rem;
+}
+.btn-xl {
+  @apply py-[.875rem] px-6;
+  @apply text-base;
+  --icon-space-x: 0.75rem;
+  --icon-size: 1.25rem;
+}
+
+.icon-btn .icon-btn__icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.icon-btn-xs {
+  @apply p-2;
+  --icon-size: 0.75rem;
+}
+.icon-btn-sm {
+  @apply p-[.625rem];
+  --icon-size: 1rem;
+}
+.icon-btn-md {
+  @apply p-3;
+  --icon-size: 1.125rem;
+}
+.icon-btn-lg {
+  @apply p-[.875rem];
+  --icon-size: 1.25rem;
+}
+.icon-btn-xl {
+  @apply p-4;
+  --icon-size: 1.25rem;
+}
